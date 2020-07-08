@@ -1,0 +1,11 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':xxx-c')
+    implementation project(':xxx-d')
+    implementation project(':xxx-e')
+    implementation project(':xxx-f')
+    implementation project(':xxx-h')
+}

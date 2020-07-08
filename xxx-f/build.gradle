@@ -1,0 +1,10 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':xxx-e')
+    implementation project(':xxx-h')
+
+    implementation 'jmimemagic:jmimemagic'
+}

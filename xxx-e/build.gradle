@@ -1,0 +1,9 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    runtimeOnly 'jaxen:jaxen'
+    runtimeOnly 'xerces:xercesImpl'
+    runtimeOnly 'xml-apis:xml-apis'
+}

@@ -1,0 +1,36 @@
+allprojects {
+    group = 'com.xxx'
+    version = '1.0.0'
+}
+
+configure(subprojects.findAll { it.name != 'xxx-platform' }) {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+
+    java {
+        withSourcesJar()
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    sourceCompatibility = '1.8'
+
+    dependencies {
+        implementation platform(project(':xxx-platform'))
+    }
+
+    configurations.all {
+        exclude group: 'xml-apis', module: 'xmlParserAPIs'
+        exclude group: 'xerces', module: 'xerces'
+        exclude group: 'com.sun.xml.bind', module: 'jaxb-impl'
+        exclude group: 'javax.xml.stream', module: 'stax-api'
+        exclude group: 'xalan', module: 'xalan'
+    }
+
+    configurations {
+        testCompileOnly.extendsFrom compileOnly
+    }
+}

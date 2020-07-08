@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':xxx-e')
+    implementation project(':xxx-f')
+    implementation project(':xxx-h')
+
+    implementation 'org.apache.xmlgraphics:batik-transcoder:1.11'
+    implementation 'org.apache.xmlgraphics:batik-codec:1.11'
+    implementation 'org.apache.xmlgraphics:batik-svg-dom:1.11'
+}

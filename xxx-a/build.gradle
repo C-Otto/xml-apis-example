@@ -1,0 +1,17 @@
+plugins {
+    id 'war'
+}
+
+dependencies {
+    providedCompile project(':xxx-b')
+    providedCompile project(':xxx-c')
+    providedCompile project(':xxx-d')
+    providedCompile project(':xxx-e')
+    providedCompile project(':xxx-f')
+    providedCompile project(':xxx-g')
+    providedCompile project(':xxx-h')
+}
+
+jar {
+    enabled = true
+}

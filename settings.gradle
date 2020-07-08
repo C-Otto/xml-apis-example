@@ -1,0 +1,15 @@
+plugins {
+    id "com.gradle.enterprise" version "3.3.4"
+}
+
+rootProject.name = 'xxx-e-parent'
+
+include(':xxx-platform')
+include(':xxx-a')
+include(':xxx-b')
+include(':xxx-c')
+include(':xxx-d')
+include(':xxx-e')
+include(':xxx-f')
+include(':xxx-g')
+include(':xxx-h')

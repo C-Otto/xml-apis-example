@@ -1,0 +1,45 @@
+plugins {
+    id 'java-platform'
+}
+
+dependencies {
+    constraints {
+        api 'jmimemagic:jmimemagic:0.1.2'
+
+        runtime 'jaxen:jaxen:1.1.6'
+        runtime 'xerces:xercesImpl:2.11.0'
+        runtime('xml-apis:xml-apis') {
+            version {
+                strictly '[1.4.01,2.0.0['
+                prefer '1.4.01'
+                because '1.4.01 is more recent than 2.x'
+            }
+        }
+
+        // spring
+        def springVersion = "5.1.7.RELEASE"
+        api group: 'org.springframework', version: springVersion, name: 'spring-context'
+        api group: 'org.springframework', version: springVersion, name: 'spring-context-support'
+        api group: 'org.springframework', version: springVersion, name: 'spring-core'
+        api group: 'org.springframework', version: springVersion, name: 'spring-instrument'
+        api group: 'org.springframework', version: springVersion, name: 'spring-jdbc'
+        api group: 'org.springframework', version: springVersion, name: 'spring-jms'
+        api group: 'org.springframework', version: springVersion, name: 'spring-orm'
+        api group: 'org.springframework', version: springVersion, name: 'spring-test'
+        api group: 'org.springframework', version: springVersion, name: 'spring-tx'
+        api group: 'org.springframework', version: springVersion, name: 'spring-web'
+        api group: 'org.springframework', version: springVersion, name: 'spring-webmvc'
+        def springSecurityVersion = "5.1.5.RELEASE"
+        api group: 'org.springframework.security', version: springSecurityVersion, name: 'spring-security-core'
+        api group: 'org.springframework.security', version: springSecurityVersion, name: 'spring-security-acl'
+        api group: 'org.springframework.security', version: springSecurityVersion, name: 'spring-security-web'
+        api group: 'org.springframework.security', version: springSecurityVersion, name: 'spring-security-taglibs'
+        api group: 'org.springframework.security', version: springSecurityVersion, name: 'spring-security-config'
+
+        api 'org.springframework.data:spring-data-jpa:2.1.8.RELEASE'
+
+        api 'org.springframework.security.oauth:spring-security-oauth2:2.3.3.RELEASE'
+        api 'org.springframework.security.extensions:spring-security-saml2-core:1.0.3.RELEASE'
+        api 'org.opensaml:opensaml:2.6.4'
+    }
+}
