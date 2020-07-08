@@ -3,6 +3,8 @@ plugins {
 }
 
 dependencies {
+    providedCompile platform(project(':xxx-platform'))
+
     providedCompile project(':xxx-b')
     providedCompile project(':xxx-c')
     providedCompile project(':xxx-d')
